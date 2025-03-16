@@ -1,0 +1,225 @@
+/* font weights */
+/* 200 - extra light */
+/* 300 - light */
+/* 400 - regular */
+/* 500 - medium */
+/* 600 - semibold */
+/* 700 - bold */
+/* 800 - extra bold */
+
+/* ------------------------------------------------------ */
+
+body{
+  font-family: "Bricolage Grotesque", sans-serif ; 
+  background-color: #F6F1ED;
+  color: #222222;
+}
+
+html{
+    scroll-padding-top: 3rem;
+    scroll-behavior: smooth;
+}
+
+/* --------------------------------------------------------- */
+/* navbar */
+nav{
+    position: sticky;
+    top: 0;
+    background-color: #F6F1ED;
+    height: 3rem;
+    border-bottom: #222222 1px solid;
+    display: grid;
+    align-items: center;
+    z-index: 2;
+}
+.nav{
+    margin: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav h3{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.nav a {
+    color: #222222;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    display: inline-block;
+    padding-bottom:1px;
+    background-image: linear-gradient(#000 0 0);
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+        background-size 0.3s,
+        background-position 0s 0.3s;
+}
+.nav a:hover{
+    background-position: 100% 100%; 
+    background-size: 100% 2px;
+}
+.sidebar a{
+    color: #222222;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding-bottom:1px;
+    background-image: linear-gradient(#000 0 0);
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+        background-size 0.3s,
+        background-position 0s 0.3s;
+}
+.sidebar a:hover{
+    background-position: 100% 100%; 
+    background-size: 100% 2px;
+}
+.sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100%;
+    width: 15rem;
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+.menu-button{
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+.close-button{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+@media(max-width: 800px){
+    #hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    body{
+        overflow-x: hidden;
+    }
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+
+/* ------------------------------------------------------ */
+/* content */
+.content{
+    width: 100;
+    margin: 0 3rem;
+    padding: 0;
+}
+.section{
+    height: calc(100vh - 3rem);
+    width: 100%;
+    display: flex;
+}
+.section:last-child{
+    height: calc(100vh - 6rem);
+}
+.header{
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+/* --------- */
+/* projects */
+#projects-sec{
+    display: flex;
+    flex-direction: column;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    /* padding: 1rem; */
+    margin-top: 3%;
+}
+.project-list a {
+    text-decoration: none;
+    align-items: center;
+    border-bottom: #222222 1px solid;
+    padding: 1rem 0;
+    width: 100%;
+    margin: 0;
+}
+.list-txt{
+    color: #222222;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+span.material-symbols-outlined {
+    /* font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal; */
+    font-size: 32px;  
+    color: #222222; 
+    transform: rotate(-45deg);
+    vertical-align: middle;
+}
+
+.project-list a:hover{
+background-color: #222222;
+.list-txt, span.material-symbols-outlined{
+    color: #F6F1ED;
+}
+span.material-symbols-outlined{
+    transform: rotate(0deg);
+    transition: 200ms linear;
+}
+}
+
+/* ---------- */
+/* contacts */
+
+#contacts-sec{
+    display: flex;
+    flex-direction: column;
+}
+#contacts-sec p {
+    font-weight: 500;
+    font-size: 18px;
+}
+  
+/* ------------------------------------------------------------- */
+/* footer */
+footer{
+    border-top: #222222 1px solid;
+    height: 3rem;
+    display: grid;
+    align-items: center;
+}
+#footer{
+    margin: 0 3rem;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#footer p{
+    margin: 0;
+}
