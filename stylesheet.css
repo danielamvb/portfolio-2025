@@ -11,7 +11,7 @@
 
 body{
   font-family: "Bricolage Grotesque", sans-serif ; 
-  background-color: #F6F1ED;
+  background-color: #FAF9F6;
   color: #222222;
 }
 
@@ -25,7 +25,7 @@ html{
 nav{
     position: sticky;
     top: 0;
-    background-color: #F6F1ED;
+    background-color: #FAF9F6;
     height: 3rem;
     border-bottom: #222222 1px solid;
     display: grid;
@@ -146,6 +146,42 @@ nav{
     font-weight: 700;
 }
 
+/* ------------ */
+/* about */
+#about-sec{
+    display: flex;
+    flex-direction: column;
+}
+.about-content{
+    margin-top: 3%;
+}
+#profile-pic{
+    width: 20vw;
+    height: 100;
+}
+.pill{
+    display: inline-block;
+    border: #222222 1px solid;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    margin-right: 0.3rem;
+}
+.pill:hover{
+    background-color: #222222;
+    color: #FAF9F6;
+    span.material-symbols-outlined{
+        color: #FAF9F6;
+    }
+}
+
+.pill-xs{
+    display: inline-block;
+    border: #222222 1px solid;
+    border-radius: 20px;
+    padding: 0.1rem 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
 /* --------- */
 /* projects */
 #projects-sec{
@@ -183,14 +219,14 @@ span.material-symbols-outlined {
 }
 
 .project-list a:hover{
-background-color: #222222;
-.list-txt, span.material-symbols-outlined{
-    color: #F6F1ED;
-}
-span.material-symbols-outlined{
-    transform: rotate(0deg);
-    transition: 200ms linear;
-}
+    background-color: #222222;
+    .list-txt, span.material-symbols-outlined{
+        color: #FAF9F6;
+    }
+    span.material-symbols-outlined{
+        transform: rotate(0deg);
+        transition: 200ms linear;
+    }
 }
 
 /* ---------- */
@@ -200,11 +236,114 @@ span.material-symbols-outlined{
     display: flex;
     flex-direction: column;
 }
-#contacts-sec p {
+.subtitle-txt {
     font-weight: 500;
     font-size: 18px;
 }
+.contact-list{
+    margin-top: 3%;
+    margin-left: auto;
+}
+.contact-list a{
+    text-decoration: none;
+    align-items: center;
+    border-bottom: #222222 1px solid;
+    width:65vw;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+.small-link{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+.contact-list a:hover{
+    background-color: #222222;
+    .list-txt, span.material-symbols-outlined{
+        color: #FAF9F6;
+    }
+    span.material-symbols-outlined{
+        transform: rotate(0deg);
+        transition: 200ms linear;
+    }
+}
   
+/* ----------------------------------------------------------- */
+/* project pages */
+
+/* .proj-page{
+    height:calc(100vh - 9rem);
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+} */
+.proj-title{
+    font-weight: 800;
+    /* margin-bottom: 2rem; */
+    font-size: 4rem;
+}
+.proj-subtitle{
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.proj-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+    height:calc(100vh - 9rem);
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+.links{
+    position: absolute;
+    bottom: 3rem;
+}
+.proj-link{
+    text-decoration: none;
+    color: #222222;
+    align-items: center;
+}
+.pill>span.material-symbols-outlined{
+    font-size: 24px;  
+    color: #222222; 
+    transform: rotate(-45deg);
+    vertical-align: top;
+}
+.mockup-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px ;
+}
+.gallery-div{
+    margin-bottom: 3rem;
+}
+.header-gallery{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+#carouselGallery{
+    width: 100%;
+    height: calc(100vh - 6rem);
+}
+.carousel-item{
+    height: calc(100vh - 6rem);
+    width: 100%;
+}
+.carousel-control-prev, .carousel-control-next{
+    width: 5%;
+    height: 90%;
+    filter: invert(90%);
+}
+#scraim-bg3{
+    background-image: url('images/poster_scraim.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* ------------------------------------------------------------- */
 /* footer */
 footer{
