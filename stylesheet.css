@@ -337,12 +337,12 @@ span.material-symbols-outlined {
     height: 90%;
     filter: invert(90%);
 }
-#scraim-bg3{
+/* #scraim-bg3{
     background-image: url('images/poster_scraim.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-}
+} */
 
 /* ------------------------------------------------------------- */
 /* footer */
