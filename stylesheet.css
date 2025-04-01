@@ -155,12 +155,29 @@ nav{
 .about-content{
     margin-top: 3%;
 }
-#profile-pic{
-    width: 22vw;
-    height: 100;
+.row {
+    flex: 0 0 0;
 }
-#about-sec h3{
+div.about-content.row{
+    height: max-content;
+}
+.about-content>.col-auto{
+    margin-right: 3rem;
+}
+.about-content>.col{
+    margin-right: 2rem;
+}
+#profile-pic{
+    height: max-content;
+}
+#about-sec h3, #about-sec h1{
+    font-weight: 700;
+}
+.subtitle-top{
     margin-top: 1.2rem;
+}
+.subtitle-bottom{
+    margin-bottom: 1rem;
 }
 .pill{
     display: inline-block;
@@ -291,12 +308,6 @@ span.material-symbols-outlined {
 /* ----------------------------------------------------------- */
 /* project pages */
 
-/* .proj-page{
-    height:calc(100vh - 9rem);
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-} */
 .proj-title{
     font-weight: 800;
     /* margin-bottom: 2rem; */
@@ -375,4 +386,17 @@ footer{
 }
 #footer p{
     margin: 0;
+}
+
+
+
+/* responsive */
+
+@media(min-height: 800px) {
+    .section{
+        height: calc-size(min-content, size + 7rem);
+    }
+    .section:last-child{
+        height: calc-size(min-content, size + 7rem);
+    }
 }
