@@ -13,13 +13,19 @@ body{
   font-family: "Bricolage Grotesque", sans-serif ; 
   background-color: #FAF9F6;
   color: #222222;
+  background-image: url('images/blobs.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
 }
-
 html{
     scroll-padding-top: 4rem;
     scroll-behavior: smooth;
 }
-
+.bg-blobs{
+    position: relative;
+    z-index: -1;
+}
 /* --------------------------------------------------------- */
 /* navbar */
 nav{
@@ -133,6 +139,7 @@ nav{
     margin: 0 3rem;
     padding: 0;
 }
+
 .section{
     height: calc(100vh - 3rem);
     width: 100%;
@@ -145,6 +152,13 @@ nav{
     font-size: 7rem;
     font-weight: 700;
 }
+
+/* ------------ */
+/* home */
+#cover{
+    width: 100%;
+}
+
 
 /* ------------ */
 /* about */
@@ -181,13 +195,14 @@ div.about-content.row{
 }
 .pill{
     display: inline-block;
-    border: #222222 1px solid;
+    border: #2638B7 1px solid;
     border-radius: 20px;
     padding: 0.3rem 1rem;
     margin-right: 0.3rem;
+    color: #2638B7;
 }
 .pill:hover{
-    background-color: #222222;
+    background-color: #2638B7;
     color: #FAF9F6;
     span.material-symbols-outlined{
         color: #FAF9F6;
@@ -195,14 +210,15 @@ div.about-content.row{
 }
 .pill-xs{
     display: inline-block;
-    border: #222222 1px solid;
+    border: #2638B7 1px solid;
     border-radius: 20px;
     padding: 0.1rem 0.5rem;
     margin-bottom: 0.5rem;
     margin-right: 0.2rem;
+    color: #2638B7;
 }
 .pill-xs:hover{
-    background-color: #222222;
+    background-color: #2638B7;
     color: #FAF9F6;
 }
 li{
@@ -245,6 +261,9 @@ ul li {
     font-size: 1.75rem;
     font-weight: 600;
 }
+.list-number{
+    color: #2638B7;
+}
 span.material-symbols-outlined {
     /* font-family: 'Material Symbols Outlined';
     font-weight: normal;
@@ -256,7 +275,7 @@ span.material-symbols-outlined {
 }
 
 .project-list a:hover{
-    background-color: #222222;
+    background-color: #2638B7;
     .list-txt, span.material-symbols-outlined{
         color: #FAF9F6;
     }
@@ -289,14 +308,17 @@ span.material-symbols-outlined {
     margin: 0;
     padding: 0.5rem 0;
 }
+#contact-title{
+    color: #2638B7;
+}
 .small-link{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
 }
 .contact-list a:hover{
-    background-color: #222222;
-    .list-txt, span.material-symbols-outlined{
+    background-color: #2638B7;
+    .list-txt, #contact-title, span.material-symbols-outlined{
         color: #FAF9F6;
     }
     span.material-symbols-outlined{
@@ -337,7 +359,7 @@ span.material-symbols-outlined {
 }
 .pill>span.material-symbols-outlined{
     font-size: 24px;  
-    color: #222222; 
+    color: #2638B7; 
     transform: rotate(-45deg);
     vertical-align: top;
 }
@@ -376,6 +398,7 @@ footer{
     height: 3rem;
     display: grid;
     align-items: center;
+    /* background-color: #FAF9F6; */
 }
 #footer{
     margin: 0 3rem;
