@@ -13,10 +13,10 @@ body{
   font-family: "Bricolage Grotesque", sans-serif ; 
   background-color: #FAF9F6;
   color: #222222;
-  background-image: url('images/blobs.svg');
+  /* background-image: url('images/blobs.svg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: 100%; */
 }
 html{
     scroll-padding-top: 4rem;
@@ -94,7 +94,8 @@ nav{
     right: 0;
     height: 100%;
     width: 15rem;
-    backdrop-filter: blur(12px);
+    /* backdrop-filter: blur(12px); */
+    background-color: #FAF9F6;
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -200,6 +201,7 @@ div.about-content.row{
     padding: 0.3rem 1rem;
     margin-right: 0.3rem;
     color: #2638B7;
+    margin-bottom: 0.3rem;
 }
 .pill:hover{
     background-color: #2638B7;
@@ -346,7 +348,7 @@ span.material-symbols-outlined {
     gap: 8%;
     height:calc(100vh - 9rem);
     margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4.5rem;
 }
 .links{
     position: absolute;
@@ -385,6 +387,12 @@ span.material-symbols-outlined {
     height: calc(100vh - 6rem);
     width: 100%;
 }
+.carousel-item img {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .carousel-control-prev, .carousel-control-next{
     width: 5%;
     height: 90%;
@@ -412,14 +420,122 @@ footer{
 }
 
 
-
+/* --------------------------------------- */
 /* responsive */
 
+/* index */
 @media(min-height: 800px) {
     .section{
         height: calc-size(min-content, size + 7rem);
     }
+    .section:first-child{
+        height: calc(100vh - 3rem)
+    }
     .section:last-child{
         height: calc-size(min-content, size + 7rem);
+    }
+}
+@media(max-height: 700px) {
+    .section{
+        height: calc-size(max-content, size + 3rem);
+    }
+    .section:last-child{
+        height: calc-size(min-content, size + 3rem);
+    }
+}
+
+/* project page */
+@media(max-height:700px){
+    .links{
+        position: initial;
+        margin-top: 2rem;
+    }
+    .proj-content, .gallery-div{
+        height: min-content;
+    }
+    .proj-content{
+        margin-bottom: 1.5rem;
+    }
+    .gallery-div{
+        margin-bottom: 2rem;
+    }
+}
+@media(max-width:1200px){
+    .proj-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .proj-content, .gallery-div{
+        height: min-content;
+    }
+    .mockup-img{
+        display: none;
+    }
+    .links{
+        position: initial;
+        margin-top: 2rem;
+    }
+    #carouselGallery{
+        height: auto;
+    }
+    .carousel-item{
+        height: 100%;
+    }
+    .carousel-item img{
+        max-height: calc(100vh - 6rem);
+        max-width: 100%;
+    }
+}
+@media(max-width:800px){
+    .proj-content{
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .proj-title{
+        font-size: 3rem;
+    }
+    .proj-subtitle{
+        font-size: 1.2rem;
+    }
+    .proj-content p, .proj-content span{
+        font-size: 0.85rem;
+    }
+    .proj-content img{
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    .pill>span.material-symbols-outlined{
+        font-size: 20px;  
+        color: #2638B7; 
+        transform: rotate(-45deg);
+        vertical-align: top;
+    }
+    .header-gallery{
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+    }
+    /* #carouselGallery{
+        height: auto;
+    }
+    .carousel-item{
+        height: 100%;
+    }
+    .carousel-item img{
+        max-height: calc(100vh - 6rem);
+        max-width: 100%;
+    } */
+    
+}
+
+/* footer */
+@media(max-width:800px){
+    #footer{
+        font-size: smaller;
+    }
+}
+@media(max-width:670px){
+    #footer{
+        flex-direction: column;
+        align-items: center;
     }
 }
