@@ -183,7 +183,7 @@ div.about-content.row{
     margin-right: 2rem;
 }
 #profile-pic{
-    height: max-content;
+    height: min-content;
 }
 #about-sec h3, #about-sec h1{
     font-weight: 700;
@@ -437,10 +437,107 @@ footer{
 }
 @media(max-height: 700px) {
     .section{
-        height: calc-size(max-content, size + 3rem);
+        height: calc-size(min-content, size + 3rem);
     }
+    /* .section:first-child{
+        height: calc-size(max-content, size + 3rem);
+    } */
     .section:last-child{
         height: calc-size(min-content, size + 3rem);
+    }
+}
+
+@media(max-width:1460px){
+    .about-content>.col-auto{
+        margin-right: 2rem;
+    }
+    .about-content>.col{
+        margin-right: 1rem;
+    }
+}
+@media(max-width:1420px){
+    .about-content>.col-auto{
+        display: flex;
+        align-items: center;
+    }
+    #profile-pic{
+        width: 25vw;
+    }
+    .about-content{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+}
+@media(max-width:1015px){
+    #profile-pic{
+        width: 90%;
+    }
+    .about-content{
+        display: flex;
+    }
+    .second-col{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        margin-top: 2rem; 
+    }
+    .experience-div{
+        margin-left: 3rem;
+    }
+    .experience-div h3{
+        margin-top: 0;
+    }
+}
+
+@media(max-width:920px){
+    .header{
+        font-size: 5rem;
+    }
+    .first-col h1{
+        font-size: 1.75rem;
+    }
+    #about-sec h3{
+        font-size: 1.25rem;
+    }
+    #about-sec p, #about-sec span{
+        font-size: 0.85rem;
+    }
+    .about-content>.col-auto{
+        margin: 0.5rem;
+    }
+    .first-col img {
+        height: 2.25rem;
+        width: 2.25rem;
+    } 
+    .section:first-child{
+        height: calc(100vh - 3rem);
+    } 
+}
+@media(max-width:750px){
+    .about-content{
+        display: flex;
+        flex-direction: column;
+    }
+    #profile-pic{
+        height: 50vh;
+        margin-bottom: 2rem;
+    }
+    .header{
+        font-size: 3.5rem;
+    }
+    .experience-div{
+        margin-left: 1rem;
+    }
+}
+@media(max-width:550px){
+    .second-col{
+        flex-direction: column;
+    }
+    .experience-div{
+        margin-left: 0;
+    }
+    .experience-div h3{
+        margin-top: 1rem;
     }
 }
 
@@ -514,17 +611,6 @@ footer{
         font-size: 4.5rem;
         margin-bottom: 2rem;
     }
-    /* #carouselGallery{
-        height: auto;
-    }
-    .carousel-item{
-        height: 100%;
-    }
-    .carousel-item img{
-        max-height: calc(100vh - 6rem);
-        max-width: 100%;
-    } */
-    
 }
 
 /* footer */
