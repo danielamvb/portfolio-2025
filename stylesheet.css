@@ -424,7 +424,7 @@ footer{
 /* responsive */
 
 /* index */
-@media(min-height: 800px) {
+@media(min-height: 1400px) {
     .section{
         height: calc-size(min-content, size + 7rem);
     }
@@ -466,6 +466,12 @@ footer{
     .about-content{
         display: grid;
         grid-template-columns: 1fr 1.5fr 1fr;
+    }
+    .section{
+        height: calc-size(min-content, size + 3rem);
+    }
+    .section:last-child{
+        height: calc-size(fit-content, size + 3rem);
     }
 }
 @media(max-width:1090px){
@@ -523,11 +529,11 @@ footer{
         height: 2.25rem;
         width: 2.25rem;
     } 
-    .section:first-child{
-        height: calc(100vh - 3rem);
-    } 
     .subtitle-txt{
         font-size: 1rem;
+    }
+    .section:first-child{
+        height: calc(100vh - 3rem);
     }
 }
 @media(max-width:875px){
