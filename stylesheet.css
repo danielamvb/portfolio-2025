@@ -310,7 +310,7 @@ span.material-symbols-outlined {
     margin: 0;
     padding: 0.5rem 0;
 }
-#contact-title{
+.contact-title{
     color: #2638B7;
 }
 .small-link{
@@ -320,7 +320,7 @@ span.material-symbols-outlined {
 }
 .contact-list a:hover{
     background-color: #2638B7;
-    .list-txt, #contact-title, span.material-symbols-outlined{
+    .list-txt, .contact-title, span.material-symbols-outlined{
         color: #FAF9F6;
     }
     span.material-symbols-outlined{
@@ -468,6 +468,20 @@ footer{
         grid-template-columns: 1fr 1.5fr 1fr;
     }
 }
+@media(max-width:1090px){
+    .list-txt{
+        font-size: 1.4rem;
+    }
+    .col-9{
+        width: 60%; /*normal é 75*/
+    }
+    .header{
+        font-size: 6rem;
+    }
+    .project-list{
+        gap: 2rem;
+    }
+}
 @media(max-width:1015px){
     #profile-pic{
         width: 90%;
@@ -512,6 +526,25 @@ footer{
     .section:first-child{
         height: calc(100vh - 3rem);
     } 
+    .subtitle-txt{
+        font-size: 1rem;
+    }
+}
+@media(max-width:875px){
+    .project-list{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .col-9{
+        width: 75%;
+    }
+    .contact-list{
+        margin-left: 0;
+    }
+    .contact-list a{
+        width: 100%;
+    }
 }
 @media(max-width:750px){
     .about-content{
@@ -525,8 +558,14 @@ footer{
     .header{
         font-size: 3.5rem;
     }
+    .subtitle-txt{
+        font-size: 0.85rem;
+    }
     .experience-div{
         margin-left: 1rem;
+    }
+    .small-link{
+        font-size: 0.75rem;
     }
 }
 @media(max-width:550px){
@@ -538,6 +577,17 @@ footer{
     }
     .experience-div h3{
         margin-top: 1rem;
+    }
+    .col-9{
+        width: 60%;
+    }
+}
+@media(max-width:480px){
+    .list-txt{
+        font-size: 1.1rem;
+    }
+    span.material-symbols-outlined{
+        font-size: 26px;
     }
 }
 
