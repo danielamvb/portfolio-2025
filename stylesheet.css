@@ -655,10 +655,10 @@ footer{
         height: auto;
     }
     .carousel-item{
-        height: 100%;
+        height: auto;
     }
     .carousel-item img{
-        max-height: calc(100vh - 6rem);
+        max-height: 50vh;
         max-width: 100%;
     }
 }
