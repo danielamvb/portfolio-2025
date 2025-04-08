@@ -382,6 +382,13 @@ span.material-symbols-outlined {
     object-fit: cover;
     border-radius: 10px ;
 }
+.travel-video{
+    height: 100%;
+}
+.lista-img{
+    height: fit-content;
+    width: auto;
+}
 .gallery-div{
     margin-bottom: 3rem;
 }
@@ -467,23 +474,9 @@ footer{
     }
 }
 @media(max-width:1420px){
-    /* .about-content>.col-auto{
-        display: flex;
-        align-items: center;
-    } */
     #profile-pic{
         width: 25vw;
     }
-    /* .about-content{
-        display: grid;
-        grid-template-columns: 1fr 1.5fr 1fr;
-    } */
-    /* .section{
-        height: calc-size(min-content, size + 3rem);
-    }
-    .section:last-child{
-        height: calc-size(fit-content, size + 3rem);
-    } */
 } 
 
 @media(max-width:1090px){
@@ -548,6 +541,7 @@ footer{
     .section:first-child{
         height: calc(100vh - 3rem);
     }
+
 }
 @media(max-width:875px){
     .project-list{
@@ -660,6 +654,11 @@ footer{
     .carousel-item img{
         max-height: 50vh;
         max-width: 100%;
+    }
+    .travel-video{
+        max-height: 55vh;
+        width: 100%;
+        align-items: center;
     }
 }
 @media(max-width:800px){
