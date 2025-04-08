@@ -385,10 +385,6 @@ span.material-symbols-outlined {
 .travel-video{
     height: 100%;
 }
-.lista-img{
-    height: fit-content;
-    width: auto;
-}
 .gallery-div{
     margin-bottom: 3rem;
 }
@@ -660,6 +656,7 @@ footer{
         width: 100%;
         align-items: center;
     }
+   
 }
 @media(max-width:800px){
     .proj-content{
@@ -688,6 +685,10 @@ footer{
     .header-gallery{
         font-size: 4.5rem;
         margin-bottom: 2rem;
+    }
+    .lista-img{
+        height: auto;
+        width: 100%;
     }
 }
 
